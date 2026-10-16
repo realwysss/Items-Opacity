@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "itemsopacity",
+	"version": "${version}",
+	"name": "Items Opacity",
+	"description": "choose any block or item and set how see through it is, from 100% down to 0% (invisible). menu on key M, needs Wysss Library.",
+	"authors": ["wysss"],
+	"contact": {"sources": "https://github.com/realwysss/Items-Opacity"},
+	"license": "All-Rights-Reserved",
+	"icon": "assets/itemsopacity/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["dev.itop.Itop"],
+		"modmenu": ["dev.itop.ModmenuIntgr"]
+	},
+	"mixins": [
+		{
+			"config": "itemsopacity.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"suggests": {
+		"modmenu": "*",
+		"wysslib": "*"
+	},
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"fabric-api": "*",
+		"minecraft": ">=1.21.11 <1.22",
+		"java": ">=21"
+	}
+}
